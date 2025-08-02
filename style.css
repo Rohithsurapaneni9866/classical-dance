@@ -1,0 +1,267 @@
+/* Basic Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #fff;
+  color: #333;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #e8491d 3px solid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+  color: #e8491d;
+  font-weight: bold;
+}
+
+/* Showcase Section */
+#showcase {
+  min-height: 500px;
+  background: url('thumbnail.jpg') no-repeat 0 -50px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding-top: 250px;
+  position: relative;
+}
+
+#showcase .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+#showcase .showcase-content {
+  position: relative;
+  z-index: 2;
+}
+
+#showcase h1 {
+  margin-top: 0;
+  font-size: 55px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#showcase p {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Main Content Sections */
+#classes {
+  padding: 20px 0;
+  background: #fff;
+  text-align: center;
+}
+
+#classes .class-item {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+#classes .class-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#classes .class-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#instructors,
+#contact {
+  padding: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: #e8491d;
+  border-bottom: 2px solid #e8491d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#instructors .instructor-item {
+  width: 45%;
+  margin: 2.5%;
+  padding: 20px;
+  float: left;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#instructors .instructor-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+  background: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+#contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  display: block;
+  width: 50%;
+  padding: 14px;
+  background: #e8491d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background: #d43b14;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #showcase h1,
+  #showcase p,
+  #classes .class-item,
+  #instructors .instructor-item {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  header nav ul {
+    padding-top: 10px;
+  }
+
+  #showcase {
+    padding-top: 100px;
+  }
+
+  #instructors .instructor-item {
+    margin: 10px 0;
+  }
+}
